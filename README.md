@@ -28,4 +28,19 @@
 ---
 
 ## 📂 Folder Structure
+SkillSwapProject/
+│
+├── app.py # Main Flask application
+├── connect.py # DB connection and helpers
+├── requirements.txt # Python dependencies
+├── static/
+│ └── style.css # Custom CSS styling
+├── templates/
+│ ├── login.html # Login Page
+│ ├── registration.html
+│ ├── index.html
+│ ├── userprofile.html
+│ └── chat.html
+
+
 
