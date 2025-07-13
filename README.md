@@ -2,7 +2,6 @@
 
 **Skill Swap** is a web-based platform built with **Flask**, designed to help students and faculty exchange skills and knowledge without involving any monetary transactions. It features real-time chat, user registration/login, and review features.
 
-![Banner](https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757119.png)
 
 ---
 
