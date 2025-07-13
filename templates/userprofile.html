@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Welcome, {{ name }}</h2>
+  <ul>
+    <li>Email: {{ email }}</li>
+    <li>Contact: {{ contact }}</li>
+    <li>Address: {{ address }}</li>
+    <li>Role: {{ role }}</li>
+    <li>Branch: {{ branch }}</li>
+  </ul>
+  <a href="/chat">Go to Chat</a>
+</body>
+</html>

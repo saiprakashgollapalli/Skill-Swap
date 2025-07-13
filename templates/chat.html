@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chat - Skill Swap</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+<body>
+  <h2>Real-time Chat Room</h2>
+  <div id="chat-box" style="height:300px; overflow-y:auto; border:1px solid #ccc; padding:10px;"></div>
+  <input type="text" id="message" placeholder="Type your message..." />
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    const socket = io();
+    const chatBox = document.getElementById('chat-box');
+
+    socket.on('message', function(data) {
+      const msg = document.createElement('div');
+      msg.innerText = data.name + ": " + data.message;
+      chatBox.appendChild(msg);
+    });
+
+    function sendMessage() {
+      const input = document.getElementById('message');
+      const message = input.value;
+      if (message.trim() !== '') {
+        socket.emit('send_message', { name: "{{ name }}", message: message });
+        input.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
